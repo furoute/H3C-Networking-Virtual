@@ -1,0 +1,110 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 3a-12-b8-c0-01-00
+        slot0 = S5800 384
+        XGE_0/49 = SW2 XGE_0/49
+        XGE_0/50 = SW2 XGE_0/50
+        XGE_0/51 = SW3 XGE_0/49
+        XGE_0/52 = SW3 XGE_0/50
+        FGE_0/53 = SW2 FGE_0/53
+        x = -1667.0
+        y = -137.0
+        z = 5.0
+    [[S6850 SW3]]
+        image = .
+        device_id = 3
+        bridge_mac = 3a-29-bd-4b-03-00
+        slot0 = S5800 384
+        XGE_0/49 = SW1 XGE_0/51
+        XGE_0/50 = SW1 XGE_0/52
+        XGE_0/51 = SW2 XGE_0/51
+        XGE_0/52 = SW2 XGE_0/52
+        x = -1285.0
+        y = 341.0
+        z = 5.0
+    [[S6850 SW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 3a-12-c4-6f-02-00
+        slot0 = S5800 384
+        XGE_0/49 = SW1 XGE_0/49
+        XGE_0/50 = SW1 XGE_0/50
+        XGE_0/51 = SW3 XGE_0/51
+        XGE_0/52 = SW3 XGE_0/52
+        FGE_0/53 = SW1 FGE_0/53
+        x = -920.0
+        y = -136.0
+        z = 5.0
+[GNS3-DATA]
+    m11 = 1.41421356237
+    m22 = 1.41421356237
+    [[NOTE 1]]
+        text = "DR1"
+        x = -1735.0
+        y = -135.0
+        font = "Arial,14,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "DR2"
+        x = -866.0
+        y = -134.0
+        font = "Arial,14,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "DRNI"
+        x = -1306.0
+        y = -29.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "BACG"
+        x = -1302.0
+        y = 105.0
+        font = "Arial,14,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Keepalive"
+        x = -1305.49390335
+        y = -104.707106781
+        font = "Arial,14,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "IPL"
+        x = -1290.0
+        y = -181.0
+        font = "Arial,14,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -1291.0
+        y = -125.865007051
+        width = 46.0
+        height = 16.8650070512
+        border_color = "#666666"
+        border_style = 2
+        z = 4.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -1446.0
+        y = 144.0
+        width = 364.0
+        height = 54.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -1773.0
+        y = -232.0
+        width = 1008.0
+        height = 244.0
+        fill_color = "#aaffff"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

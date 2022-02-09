@@ -1,0 +1,98 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 PEX100]]
+        image = .
+        device_id = 3
+        bridge_mac = 46-30-6c-c2-03-00
+        slot0 = S5800 520
+        XGE_0/49 = Member1 XGE_0/51
+        XGE_0/50 = Member2 XGE_0/52
+        GE_0/2 = DeviceB GE_0/1
+        GE_0/1 = DeviceA GE_0/1
+        x = -828.0
+        y = -80.0
+        z = 5.0
+    [[S6850 PEX101]]
+        image = .
+        device_id = 4
+        bridge_mac = 46-30-7e-e8-04-00
+        slot0 = S5800 520
+        XGE_0/49 = Member1 XGE_0/52
+        XGE_0/50 = Member2 XGE_0/51
+        GE_0/3 = DeviceB GE_0/2
+        GE_0/1 = DeviceA GE_0/2
+        x = -252.0
+        y = -81.0
+        z = 5.0
+    [[PC VLAN20]]
+        image = .
+        device_id = 9
+        bridge_mac = 56-18-67-f8-09-00
+        slot0 = PC 250
+        GE_0/1 = DeviceB GE_0/3
+        symbol = PC
+        x = -250.0
+        y = 372.5
+        z = 5.0
+    [[PC VLAN10]]
+        image = .
+        device_id = 8
+        bridge_mac = 46-4b-03-ef-08-00
+        slot0 = PC 250
+        GE_0/1 = DeviceA GE_0/3
+        symbol = PC
+        x = -829.0
+        y = 381.0
+        z = 5.0
+    [[S6850 Member1]]
+        image = .
+        device_id = 1
+        bridge_mac = 46-0a-8e-ee-01-00
+        slot0 = S5800 520
+        XGE_0/49 = Member2 XGE_0/49
+        XGE_0/50 = Member2 XGE_0/50
+        XGE_0/51 = PEX100 XGE_0/49
+        XGE_0/52 = PEX101 XGE_0/49
+        x = -829.0
+        y = -355.0
+        z = 5.0
+    [[S6850 Member2]]
+        image = .
+        device_id = 2
+        bridge_mac = 46-0a-a3-d4-02-00
+        slot0 = S5800 520
+        XGE_0/49 = Member1 XGE_0/49
+        XGE_0/50 = Member1 XGE_0/50
+        XGE_0/51 = PEX101 XGE_0/50
+        XGE_0/52 = PEX100 XGE_0/50
+        x = -254.0
+        y = -355.0
+        z = 5.0
+    [[S5820V2-54QS-GE DeviceA]]
+        image = .
+        device_id = 5
+        bridge_mac = 44-d3-87-a4-05-00
+        slot0 = S5800 520
+        GE_0/1 = PEX100 GE_0/1
+        GE_0/2 = PEX101 GE_0/1
+        GE_0/3 = VLAN10 GE_0/1
+        x = -831.0
+        y = 198.0
+        z = 5.0
+    [[S5820V2-54QS-GE DeviceB]]
+        image = .
+        device_id = 6
+        bridge_mac = 44-d3-8e-f4-06-00
+        slot0 = S5800 520
+        GE_0/1 = PEX100 GE_0/2
+        GE_0/2 = PEX101 GE_0/3
+        GE_0/3 = VLAN20 GE_0/1
+        x = -249.5
+        y = 202.5
+        z = 5.0
+[GNS3-DATA]
+    m11 = 1.41421356237
+    m22 = 1.41421356237

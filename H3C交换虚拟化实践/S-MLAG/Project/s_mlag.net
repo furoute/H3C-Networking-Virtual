@@ -1,0 +1,95 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 DeviceE]]
+        image = .
+        device_id = 5
+        bridge_mac = 8e-aa-df-5a-05-00
+        slot0 = S5800 1024
+        XGE_0/49 = DeviceA XGE_0/52
+        x = -4002.0
+        y = -1899.0
+        z = 5.0
+    [[S6850 DeviceD]]
+        image = .
+        device_id = 4
+        bridge_mac = 88-7a-b4-f5-04-00
+        slot0 = S5800 1024
+        XGE_0/49 = DeviceA XGE_0/51
+        x = -4125.3023074
+        y = -1898.49747468
+        z = 5.0
+    [[S6850 DeviceA]]
+        image = .
+        device_id = 1
+        bridge_mac = 88-7a-94-df-01-00
+        slot0 = S5800 2048
+        XGE_0/49 = DeviceB XGE_0/49
+        XGE_0/50 = DeviceC XGE_0/49
+        XGE_0/51 = DeviceD XGE_0/49
+        XGE_0/52 = DeviceE XGE_0/49
+        x = -4175.11810794
+        y = -2175.44069222
+        z = 5.0
+    [[S6850 DeviceC]]
+        image = .
+        device_id = 3
+        bridge_mac = 88-7a-ac-1d-03-00
+        slot0 = S5800 1024
+        XGE_0/49 = DeviceA XGE_0/50
+        x = -4250.91100116
+        y = -1898.66904756
+        z = 5.0
+    [[S6850 DeviceB]]
+        image = .
+        device_id = 2
+        bridge_mac = 88-7a-a6-d4-02-00
+        slot0 = S5800 1024
+        XGE_0/49 = DeviceA XGE_0/49
+        x = -4373.38975261
+        y = -1901.46194078
+        z = 5.0
+[GNS3-DATA]
+    m11 = 2.0
+    m22 = 2.0
+    [[NOTE 1]]
+        text = "S-MLAG  BACG"
+        x = -4202.40237919
+        y = -2035.38329701
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Vlan9:192.168.9.2"
+        x = -4098.0
+        y = -1816.5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Vlan9:192.168.9.1"
+        x = -4117.0
+        y = -2159.5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Vlan6:192.168.6.1"
+        x = -4117.5
+        y = -2178.5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Vlan6:192.168.6.2"
+        x = -4351.5
+        y = -1817.0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -4320.95010641
+        y = -2061.69343418
+        width = 336.466558135
+        height = 75.5441558773
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
