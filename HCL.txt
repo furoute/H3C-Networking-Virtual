@@ -1,4 +1,2 @@
 H3C网络设备模拟器(HCL)下载地址: 
 http://www.h3c.com/cn/Service/Document_Software/Software_Download/Other_Product/H3C_Cloud_Lab/Catalog/HCL/
-
-Test
